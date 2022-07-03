@@ -1,0 +1,139 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+nav{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+nav .mobile{
+    display: none;
+
+}
+
+nav .mobile .header{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+   align-items: center;
+
+}
+
+nav .mobile .header .more button{
+  border: none;
+  background-color:black;
+  color: white;
+  padding: 10px;
+
+}
+.collapsed{
+display: none;
+}
+
+nav .logo{
+    min-width: 250px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 20px 25px;
+}
+
+nav a:hover{
+    color: black;
+    background-color: #f41ab6;
+}
+nav .logo a:hover{
+ 
+    background-color: black;
+}
+
+nav .desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .desktop .primary,
+nav .desktop .secondary{
+    display: flex;
+}
+
+nav .desktop .secondary.mini{
+display: none;
+
+}
+
+@media(max-width:859px){
+    nav .logo{
+        min-width: 100px;
+    }
+
+
+    nav .secondary.full{
+        display: none;
+    }
+
+    nav .desktop .secondary.mini{
+        display: block;
+    }
+
+    nav .desktop .secondary.mini .submenu{
+        display: none;
+        position: absolute;
+        background-color: black;
+        right: 0;
+        width: 200px;
+    }
+
+    nav .desktop .secondary.mini:hover .submenu {
+        display: block;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    nav .desktop{
+        display: none;
+    }
+    nav .mobile {
+        display: block;
+    }
+
+    
+}
+
